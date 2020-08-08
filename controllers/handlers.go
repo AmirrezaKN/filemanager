@@ -7,6 +7,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+// SendFile sends the file
 func SendFile(app echo.Context) error {
 	id := app.Param("id")
 	filepath := fmt.Sprintf("%s/temp/%s", os.Getenv("PWD"), id)
